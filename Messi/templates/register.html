@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .CLR2{Background-color:Lightblue;font-family:futura}
+        .CLR3{Background-color:Yellow;font-family:futura}
+    </style>
+</head>
+<body style="background-color:indianred">
+<h1>REGISTRATION</h1>
+<form action="register" method="post">
+    {% csrf_token %}
+    <input class="CLR2" type="text" name="username" placeholder="Enter your Username"><br>
+    <input class="CLR2" type="text" name="first_name" placeholder="Enter your first name"><br>
+    <input class="CLR2" type="text" name="last_name" placeholder="Enter your last name"><br>
+    <input class="CLR2" type="email" name="email" placeholder="Enter your email"><br>
+    <input class="CLR2" type="password" name="password" placeholder="Enter your password"><br>
+    <input class="CLR2" type="password" name="password1" placeholder="Confirm your password"><br>
+    <input class="CLR3" type="submit">
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>

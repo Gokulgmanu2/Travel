@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <style>
+        .CLR{Background-color:aqua;font-family:futura}
+        .CLR1{Background-color:lightgreen;font-family:futura}
+    </style>
+</head>
+<body style="background-color:thistle">
+<li>LOGIN</li>
+
+<form action="login" method="post">
+    {% csrf_token %}
+    <input class="CLR" type="text" name="username" placeholder="Enter your username"><br>
+    <input class="CLR" type="password" name="password" placeholder="Enter your password"><br>
+    <input class="CLR1" type="submit">
+</form>
+</body>
+</html>
